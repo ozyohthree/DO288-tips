@@ -5,6 +5,8 @@ branch name:practice1
 folder name: nodejs-helloworld
 project name: hello-world
 application name: hello
+test: curl -s https://*  
+      curl -s http://*
 
 PRACTICE 2: Update s2i script
 
