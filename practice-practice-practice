@@ -1,0 +1,44 @@
+PRACTICE 1: Fix build issues
+
+repo: https://github.com/ozyohthree/DO288-apps 
+branch name:practice1
+folder name: nodejs-helloworld
+project name: hello-world
+application name: hello
+
+PRACTICE 2: Update s2i script
+
+s2i builder image: rhscl/httpd-24-rhel7   (use httpd:2.4)
+repo: https://github.com/ozyohthree/DO288-apps
+branch: practice1
+application directory: s2i-scripts 
+project name: developer-s2i-scripts
+application name: bonjour 
+
+
+PRACTICE 3: Docker Strategy
+
+- Git repo: https://github.com/ozyohthree/spring-petclinic.git
+- application name: pets
+- Strategy: Dockerfile
+- Should be able to redeploy with 'oc start-build'
+
+
+PRACTICE 4: HELM with TLS Security
+- Create deploy an application with Helm chart
+- use a separate values file
+- update a environment specific label via the values file
+
+
+PRACTICE 5: TEMPLATES
+- Deploy uisng templates an application with UI and backend componets
+- each with a 1 template for building and 1 for deploying 
+
+
+
+PRACTICE 6: Triggers
+Update tekton pipeline
+- EventListener
+- Trigger Template
+- Trigger Binding
+- Trigger
