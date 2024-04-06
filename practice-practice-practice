@@ -10,7 +10,7 @@ test: curl -s https://hello-hello-world*
 
 PRACTICE 2: Update s2i script
 
-s2i builder image: rhscl/httpd-24-rhel7   (use httpd:2.4)
+s2i builder image: rhscl/httpd-24-rhel7   (image stream: httpd:2.4)
 repo: https://github.com/ozyohthree/DO288-apps
 branch: practice1
 application directory: s2i-scripts 
