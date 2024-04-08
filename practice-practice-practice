@@ -32,6 +32,7 @@ PRACTICE 4: HELM with TLS Security
 - Use the cockroachdb Helm Chart with version 6.0.4 from the repository https://charts.cockroachdb.com/ as the database dependency.
 - port: 8080
 - DB Variables
+- Use TLS security
 Variable	Value
 DB_HOST	exoplanets-cockroachdb
 DB_PORT	26257
