@@ -27,6 +27,32 @@ PRACTICE 3: Docker Strategy
 
 
 PRACTICE 4: HELM with TLS Security
+- Chart name: exochart
+- Chart image: quay.io/redhattraining/exoplanets:v1.0
+- Use the cockroachdb Helm Chart with version 6.0.4 from the repository https://charts.cockroachdb.com/ as the database dependency.
+- port: 8080
+- DB Variables
+Variable	Value
+DB_HOST	exoplanets-cockroachdb
+DB_PORT	26257
+DB_USER	root
+DB_NAME	postgres
+- project name: planets
+- chart name: exoplanets
+- Add values file for test environment
+Env   Pods	Memory      CPU Limit
+Test  5	128Mi	      250m
+- Add label 
+Environment: test
+
+Kustomize it
+- Kustomize Directory: exokustom
+- Use helm tempalaet to create base deployment resource
+- use test directory for Test Overlay
+Environment	Pods	Memory	CPU Limit
+Test	5	128Mi	250m
+
+
 - Create deploy an application with Helm chart
 - use a separate values file
 - update a environment specific label via the values file
