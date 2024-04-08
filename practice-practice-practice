@@ -35,6 +35,8 @@ PRACTICE 4: HELM with TLS Security
 PRACTICE 5: TEMPLATES
 - Deploy uisng templates an application with UI and backend componets
 - each with a 1 template for building and 1 for deploying 
+https://docs.openshift.com/container-platform/4.12/openshift_images/using-templates.html#using-templates
+
 
 
 
