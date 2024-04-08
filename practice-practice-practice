@@ -63,8 +63,13 @@ PRACTICE 5: TEMPLATES
 - Deploy uisng templates an application with UI and backend componets
 - each with a 1 template for building and 1 for deploying 
 https://docs.openshift.com/container-platform/4.12/openshift_images/using-templates.html#using-templates
+- Create application with 
+template: openjdk18-web-basic-s2i
+APPLICATION_NAME=spring-rest
+SOURCE_REPOSITORY_URL=https://github.com/redhat-cop/spring-rest.git 
+CONTEXT_DIR=''
 
-
+$ oc new-app --template=openjdk18-web-basic-s2i -p APPLICATION_NAME=spring-rest -p SOURCE_REPOSITORY_URL=https://github.com/redhat-cop/spring-rest.git -p CONTEXT_DIR=''
 
 
 PRACTICE 6: Triggers
@@ -73,3 +78,4 @@ Update tekton pipeline
 - Trigger Template
 - Trigger Binding
 - Trigger
+- https://github.com/ozyohthree/pipelines-tutorial
