@@ -15,6 +15,14 @@ Tips:
       ii)  registry
       iii) repo
 
+VIM Prep
+vim ~/.vimrc   # then add:
+syntax on
+set nu
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
 PRACTICE 1: Fix build issues
 
 repo: https://github.com/ozyohthree/DO288-apps 
