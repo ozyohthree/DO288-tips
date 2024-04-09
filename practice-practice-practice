@@ -9,6 +9,12 @@ Work with the source-to-image (S2I) framework
 Work with templates
 Work with OpenShift Pipelines
 
+Tips:
+1) set up env and get the credentials
+      i)   oc
+      ii)  registry
+      iii) repo
+
 PRACTICE 1: Fix build issues
 
 repo: https://github.com/ozyohthree/DO288-apps 
