@@ -1,3 +1,14 @@
+OBJECTIVE: SCORE
+Work with Red Hat OpenShift
+Deploy multi-container applications
+Work with container images
+Troubleshoot application deployment issues
+Work with image streams
+Work with configuration maps and secrets
+Work with the source-to-image (S2I) framework
+Work with templates
+Work with OpenShift Pipelines
+
 PRACTICE 1: Fix build issues
 
 repo: https://github.com/ozyohthree/DO288-apps 
