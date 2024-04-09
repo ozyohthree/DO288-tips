@@ -25,6 +25,10 @@ PRACTICE 3: Docker Strategy
 - Strategy: Dockerfile
 - Should be able to redeploy with 'oc start-build'
 
+$ oc new-build https://git.ocp4.example.com/developer/DO288-apps.git#new-build \
+--strategy=docker --context-dir=/labs/architecture-setup/hello-flask \
+-to-docker=true --to=registry.ocp4.example.com:8443/developer/flask-app:latest
+
 
 PRACTICE 4: HELM with TLS Security
 - Chart name: exochart
