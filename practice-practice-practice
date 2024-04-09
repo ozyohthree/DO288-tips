@@ -28,6 +28,10 @@ application directory: s2i-scripts
 project name: developer-s2i-scripts
 application name: bonjour 
 
+$ oc new-app --name=bonjour \
+httpd:2.4~https://github.com/ozyohthree/DO288-apps#practice1 \
+--context-dir=s2i-scripts
+
 
 PRACTICE 3: Docker Strategy
 
