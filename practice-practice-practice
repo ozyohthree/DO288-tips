@@ -10,10 +10,12 @@ Work with templates
 Work with OpenShift Pipelines
 
 Tips:
-1) set up env and get the credentials
-      i)   oc
-      ii)  registry
-      iii) repo
+Enviromnent variables:
+vim ~/.bashrc
+Set up aliases for
+i)   oc  - oclogin
+ii)  registry - podmanlogin
+iii) repo
 
 VIM Prep
 vim ~/.vimrc   # then add:
