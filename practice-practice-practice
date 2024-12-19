@@ -26,14 +26,29 @@ set tabstop=2
 set shiftwidth=2
 
 PRACTICE 1: Fix build issues
-
+VARIANT 1
 repo: https://github.com/ozyohthree/DO288-apps 
 branch name:practice1
 folder name: nodejs-helloworld
 project name: hello-world
 application name: hello
 test: curl -s https://hello-hello-world*  
-      curl -s http://hello-hello-world* 
+
+tip: oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloword
+
+VARIANT 2
+repo: https://github.com/ozyohthree/DO288-apps 
+branch name:source-build
+folder name: nodejs-helloworld
+project name: greet-proj
+application name: greet
+Nodejs image: nodejs:16-ubi8
+Npm modules registry: http://nexus-infra.apps.ocp4.example.com/repository/npm (use npm_config_registry as the build-env key)
+
+test: curl -s https://hello-hello-world*  
+
+
+tip: oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloword
 
 PRACTICE 2: Update s2i script
 
