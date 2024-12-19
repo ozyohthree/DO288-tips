@@ -47,8 +47,9 @@ Npm modules registry: http://nexus-infra.apps.ocp4.example.com/repository/npm (u
 
 test: curl -s https://hello-hello-world*  
 
-
-tip: oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloword
+tip: oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#source-build \
+      --build-env npm_config_registry=http://nexus-infra.apps.ocp4.example.com/repository/npm \
+      --context-dir=nodejs-helloword
 
 PRACTICE 2: Update s2i script
 
@@ -59,7 +60,7 @@ application directory: s2i-scripts
 project name: developer-s2i-scripts
 application name: bonjour 
 
-$ oc new-app --name=bonjour \
+tip: oc new-app --name=bonjour \
 httpd:2.4~https://github.com/ozyohthree/DO288-apps#practice1 \
 --context-dir=s2i-scripts
 
@@ -71,7 +72,7 @@ PRACTICE 3: Docker Strategy
 - Strategy: Dockerfile
 - Should be able to redeploy with 'oc start-build'
 
-$ oc new-build https://git.ocp4.example.com/developer/DO288-apps.git#new-build \
+tip: oc new-build https://git.ocp4.example.com/developer/DO288-apps.git#new-build \
 --strategy=docker --context-dir=/labs/architecture-setup/hello-flask \
 -to-docker=true --to=registry.ocp4.example.com:8443/developer/flask-app:latest
 
@@ -119,7 +120,7 @@ APPLICATION_NAME=spring-rest
 SOURCE_REPOSITORY_URL=https://github.com/redhat-cop/spring-rest.git 
 CONTEXT_DIR=''
 
-$ oc new-app --template=openjdk18-web-basic-s2i -p APPLICATION_NAME=spring-rest -p SOURCE_REPOSITORY_URL=https://github.com/redhat-cop/spring-rest.git -p CONTEXT_DIR=''
+tip: oc new-app --template=openjdk18-web-basic-s2i -p APPLICATION_NAME=spring-rest -p SOURCE_REPOSITORY_URL=https://github.com/redhat-cop/spring-rest.git -p CONTEXT_DIR=''
 
 
 PRACTICE 6: Triggers
