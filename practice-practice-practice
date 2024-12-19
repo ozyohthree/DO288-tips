@@ -51,6 +51,8 @@ tip: oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#source-bui
       --build-env npm_config_registry=http://nexus-infra.apps.ocp4.example.com/repository/npm \
       --context-dir=nodejs-helloword
 
+
+
 PRACTICE 2: Deploy Simple applications
 VARIANT 1: Deploying Applications by Using the oc and odo CLIs
 
@@ -95,6 +97,8 @@ http://todo-list-deploy-review.apps.ocp4.example.com/todos \
 retrieve data: 
 curl -s \
 http://todo-list-deploy-review.apps.ocp4.example.com/todos; echo
+
+
 
 
 PRACTICE 3: Update s2i script
