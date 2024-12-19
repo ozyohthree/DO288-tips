@@ -1,0 +1,38 @@
+- [Task 1: Deploy Application with the Kustomize CLI](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s06)
+    - Configure two versions of deployment files, one for dev, one for prod
+      - Dev
+        - Memory: 128Mi
+        - CPU: 128m
+      - Prod
+        - Memory 256Mi
+        - 256m
+      - Project: multicontainer-kustomize
+      - Directory: ~/DO288/labs/multicontainer-kustomize
+
+- [Task 2: Deploy application using helm](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s07) 
+    - Project: multicontainer-review
+    - image: registry.ocp4.example.com:8443/redhattraining/ocpdev-expense-service:4.12
+    - replicas: 1
+    - host: expense-service
+      - {{ .Values.expenseService.host }}.{{ .Values.expenseService.domain }}
+    - add this to the NOTES.txt file:
+      - Your application is available at: "{{ .Values.expenseService.host }}.{{ .Values.expenseService.domain }}/expenses"
+
+- [Task 3: Deploy application using both helm and kustomize](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s07)
+  - command to run at the beginning `lab start multicontainer-review`
+  - project: multicontainer-review
+  - application instructions:
+    - helm
+      - application directory:
+        - ~/DO288/labs/multicontainer-review/famous-quotes
+      - add the following features to the chart
+        - Parameterize the famous-quotes image name
+        - Use the quotes.import.enabled value to optionally add the volume and the import configuration to the famous-quotes deployment
+        - Use the quotes.import.enabled value to optionally create the configuration map that contains the import data
+      - use the output of the famous-quotes chart render to create the following file
+        - ~/DO288/labs/multicontainer-review/kustomized-quotes/base/app.yaml
+    - kustomize:
+      - application directory:
+        - ~/DO288/labs/multicontainer-review/kustomized-quotes
+      - add the missing files to make the kustomize manifests render correctly
+      - deploy the staging version of the application
