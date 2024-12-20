@@ -37,7 +37,6 @@ EXAMPLE 1
   - folder name: nodejs-helloworld
   - project name: hello-world
   - application name: hello
-  - test: curl -s https://hello-hello-world*  
 
     <br>
     <details>
@@ -45,6 +44,9 @@ EXAMPLE 1
 
     ```bash
     oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloword
+
+    # test 
+    curl -s https://hello-hello-world*  
     ```
 
     </details>
