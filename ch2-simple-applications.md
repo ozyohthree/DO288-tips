@@ -134,31 +134,8 @@ EXAMPLE 2
   <br>
 
 
-### PRACTICE 3: Update s2i script
 
-- s2i builder image: rhscl/httpd-24-rhel7   (image stream: httpd:2.4)
-- repo: https://github.com/ozyohthree/DO288-apps
-- branch: practice1
-- application directory: s2i-scripts 
-- project name: developer-s2i-scripts
-- application name: bonjour 
-
-  <br>
-  <details>
-  <summary>CheatSheet</summary>
-
-   ```bash
-   oc new-app --name=bonjour \
-    httpd:2.4~https://github.com/ozyohthree/DO288-apps#practice1 \
-    --context-dir=s2i-scripts
-  ```
-
-  </details>
-  <br>
-  <br>
-
-
-### PRACTICE 4: Docker Strategy
+### PRACTICE 4: Build and Deploy using Docker Strategy
 
 - Git repo: https://github.com/ozyohthree/spring-petclinic.git
 - application name: pets
@@ -170,9 +147,20 @@ EXAMPLE 2
   <summary>CheatSheet</summary>
 
    ```bash
-  oc new-build https://git.ocp4.example.com/developer/DO288-apps.git#new-build \
-    --strategy=docker --context-dir=/labs/architecture-setup/hello-flask \
-    -to-docker=true --to=registry.ocp4.example.com:8443/developer/flask-app:latest
+   # build
+  oc new-build https://github.com/ozyohthree/spring-petclinic.git --strategy=docker
+  
+  # check logs 
+  oc logs -f bc/spring-petclinic
+
+  # copy image url from logs to deploy
+  oc new-app image-registry.openshift-image-registry.svc:5000/spring-petclinic@sha256:thehashvalue
+
+  # expose the app
+  oc expose svc spring-petclinic
+
+  # get route and view app in browser
+
   ```
 
   </details>

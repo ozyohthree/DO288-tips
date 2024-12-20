@@ -1,4 +1,4 @@
-- [Task 1: Customize S2I build by overriding the default scripts](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch04s08) 
+- [Task 1: Customize S2I build by overriding the default scripts](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.14/pages/ch04s08) 
     - Objective: Customize S2I *assemble* and *run* scripts
     - Customize the build scripts then and deploy an application called "greeting" using the *latest* tagged rhscl/httpd-24-rhel7 build image using the following requirements:
         - Add an info.html page that contains the below build message.
@@ -17,7 +17,7 @@
     $ curl -s http://greeting-greeting.apps.ocp4.example.com/info.html
     ```
     FYI:
-    - You can include environment variables to your build environment by including an [environment file](https://docs.openshift.com/container-platform/4.12/cicd/builds/build-strategies.html#builds-strategy-s2i-build_build-strategies) in *.s2i* folder
+    - You can include environment variables to your build environment by including an [environment file](https://docs.openshift.com/container-platform/4.14/cicd/builds/build-strategies.html#builds-strategy-s2i-build_build-strategies) in *.s2i* folder
 
     <br>
     <details>
@@ -53,7 +53,7 @@
     <br>
     <br>
 
-- [Task 2: Deploy application with Docker Strategy and fix Issue with OpenShift Build](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch04s09)
+- [Task 2: Deploy application with Docker Strategy and fix Issue with OpenShift Build](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.14/pages/ch04s09)
     - Objectives: 
         - Create, Start, Rebuild Application Build
         - Debug and fix failed build
@@ -98,22 +98,9 @@
     # test application running on OCP
     curl -s \
          expense-service-expense.apps.ocp4.example.com/expenses | jq
-
-
-
-
     ```
 
     </details>
 
     <br>
     <br>
-
-- [Task 3: Fix s2i issues](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.10/pages/ch04s09)
-    - The application team has been having issues deploying the below application, troubleshoot and resolve the issue. 
-    - Application Git repository: 
-    - Application Git branch: builds-review
-    - Git directory: build app
-    - Application stack: Nodejs
-    - Application Nexus server: http://<update this>/repository/nodejs
-    - Build script: build.sh

@@ -1,4 +1,4 @@
-- [Task 1: Deploy Application with the Kustomize CLI](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s06)
+- [Task 1: Deploy Application with the Kustomize CLI](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.14/pages/ch06s06)
     - Configure two versions of deployment files, one for dev, one for prod
       - Dev
         - Memory: 128Mi
@@ -9,7 +9,7 @@
       - Project: multicontainer-kustomize
       - Directory: ~/DO288/labs/multicontainer-kustomize
 
-- [Task 2: Deploy application using helm](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s07) 
+- [Task 2: Deploy application using helm](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.14/pages/ch06s07) 
     - Project: multicontainer-review
     - image: registry.ocp4.example.com:8443/redhattraining/ocpdev-expense-service:4.12
     - replicas: 1
@@ -18,7 +18,7 @@
     - add this to the NOTES.txt file:
       - Your application is available at: "{{ .Values.expenseService.host }}.{{ .Values.expenseService.domain }}/expenses"
 
-- [Task 3: Deploy application using both helm and kustomize](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.12/pages/ch06s07)
+- [Task 3: Deploy application using both helm and kustomize](https://role.rhu.redhat.com/rol-rhu/app/courses/do288-4.14/pages/ch06s07)
   - command to run at the beginning `lab start multicontainer-review`
   - project: multicontainer-review
   - application instructions:
