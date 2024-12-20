@@ -197,8 +197,8 @@ EXAMPLE 2
 - chart name: exoplanets
 - Add values file for test environment
 ```bash 
-Env   Pods	Memory      CPU Limit
-Test  5	    128Mi	      250m
+Env   Pods	Memory    CPU Limit
+Test  5	    128Mi     250m
 
 Add label
 Environment: test
@@ -210,8 +210,8 @@ Environment: test
 - Use helm tempalaet to create base deployment resource
 - use test directory for Test Overlay
 ```bash
-Env	  Pods	Memory	CPU Limit
-Test	5	    128Mi	  250m
+Env   Pods	Memory    CPU Limit
+Test  5	    128Mi     250m
 ```
 - Create deploy an application with Helm chart
 - use a separate values file
