@@ -207,13 +207,13 @@ Environment: test
 
 2. Kustomize it
 - Kustomize Directory: exokustom
-- Use helm tempalaet to create base deployment resource
+- Use helm template to create base deployment resource
 - use test directory for Test Overlay
 ```bash
 Env   Pods	Memory    CPU Limit
 Test  5	    128Mi     250m
 ```
-- Create deploy an application with Helm chart
+- Deploy an application with Helm chart
 - use a separate values file
 - update a environment specific label via the values file
 
