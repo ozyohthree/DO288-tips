@@ -26,10 +26,12 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 ```
+<br>
+<br>
 
 ### PRACTICE 1: Fix build issues
 
-  - EXAMPLE 1
+EXAMPLE 1
   - repo: https://github.com/ozyohthree/DO288-apps 
   - branch name:practice1
   - folder name: nodejs-helloworld
@@ -49,7 +51,7 @@ set shiftwidth=2
     <br>
     <br>
 
-  - EXAMPLE 2
+EXAMPLE 2
   - repo: https://github.com/ozyohthree/DO288-apps 
   - branch name:source-build
   - folder name: nodejs-helloworld
@@ -215,7 +217,7 @@ Test	5	    128Mi	  250m
 
   <br>
   <br>
-  
+
 ### PRACTICE 6: TEMPLATES
 - Deploy uisng templates an application with UI and backend componets
 - each with a 1 template for building and 1 for deploying 
