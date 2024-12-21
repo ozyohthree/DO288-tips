@@ -43,7 +43,17 @@ EXAMPLE 1
     <summary>CheatSheet</summary>
 
     ```bash
-    oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloword
+    # deploy
+    oc new-app --name=hello https://github.com/ozyohthree/DO288-apps#practice1 --context-dir=nodejs-helloworld
+
+    # check logs
+    oc logs -f bc/hello
+
+    # check issue
+    python -m json.tool package.json
+
+    # rebuild after fixing and checking in new package.json fine
+    oc start-build bc/hello
 
     # test 
     curl -s https://hello-hello-world*  
@@ -70,6 +80,15 @@ EXAMPLE 2
     oc new-app --name=hello nodejs:16-ubi8~https://github.com/ozyohthree/DO288-apps#source-build \
       --build-env npm_config_registry=http://nexus-infra.apps.ocp4.example.com/repository/npm \
       --context-dir=nodejs-helloword
+
+    # check logs
+    oc logs -f bc/hello
+
+    # check issue
+    python -m json.tool package.json
+
+    # rebuild after fixing and checking in new package.json fine
+    oc start-build bc/hello
 
     # test
     curl -s https://hello-hello-world*  
